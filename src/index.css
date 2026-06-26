@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Abhaya Libre", serif;
+  --font-script: "Abhaya Libre", cursive;
+  --font-sans: "Abhaya Libre", sans-serif;
+  --font-cinzel: "Abhaya Libre", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-playball: "Abhaya Libre", cursive;
+  --font-sinhala: "Abhaya Libre";
+
+  --color-sage: #87937a;
+  /* Soft Sunset Red */
+  --color-paper: #fae9cb;
+
+  --color-theme-50: #fff5f2;
+  --color-theme-100: #ffe8e1;
+  --color-theme-200: #ffd1c1;
+  --color-theme-300: #F2AE66;
+  /* User Golden Orange */
+  --color-theme-400: #fd9b7e;
+  --color-theme-500: #FD8A6B;
+  /* User Coral */
+  --color-theme-600: #ea5a7a;
+  --color-theme-700: #C30E59;
+  /* User Deep Magenta */
+  --color-theme-800: #a10b4a;
+  --color-theme-900: #7d0939;
+}
+
+:root {
+  background-color: var(--color-paper);
+  color: #4D412F;
+  font-family: var(--font-sinhala);
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Abhaya Libre", Arial, sans-serif !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.script {
+  font-family: var(--font-script);
+}
+
+
+.clip-path-envelope {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.clip-path-envelope-bottom {
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+/* 3D Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+.website-shell {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(45, 90, 39, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(21, 128, 61, 0.1), transparent 40%),
+    radial-gradient(circle at 50% 20%, rgba(162, 197, 160, 0.2), transparent 50%),
+    linear-gradient(rgba(250, 233, 203, 0.7), rgba(250, 233, 203, 0.7)),
+    url('/vintage_paper.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.font-numeric {
+  font-family: "Montserrat", "Inter", sans-serif !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Apex", sans-serif !important;
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
