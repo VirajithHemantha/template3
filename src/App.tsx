@@ -4,37 +4,37 @@ import { Sparkles, MapPin, Calendar, Clock, ChevronDown } from "lucide-react";
 
 const INVITATION = {
   couple: {
-    bride: "නෙත්මි",
-    groom: "දිලූක",
-    brideFull: "නෙත්මි ශෙහානි පෙරේරා",
-    groomFull: "දිලූක මධුශාන් ජයසිංහ",
+    bride: "ඕෂදී",
+    groom: "නදීශ",
+    brideFull: "ඕෂදී නිමේෂා",
+    groomFull: "නදීශ චතුරංග",
   },
   date: {
-    displayNumeric: "15 . 08 . 2026",
-    displayLong: "වර්ෂ 2026 ක් වූ අගෝස්තු මස 15 වන දින",
-    countdownTarget: "2026-08-15T10:30:00+05:30",
+    displayNumeric: "23 . 07 . 2026",
+    displayLong: "2026 ජූලි 23 බ්‍රහස්පතින්දා",
+    countdownTarget: "2026-07-23T10:00:00+05:30",
   },
   time: {
-    ceremonyStart: "ප.ව. 10:30",
-    ceremonyEnd: "ප.ව. 3:30",
-    registration: "පෙ.ව. 10:45",
-    welcome: "පෙ.ව. 9:30",
+    ceremonyStart: "පෙ.ව. 10.00",
+    ceremonyEnd: "ප.ව. 4.00",
+    registration: "පෙ.ව. 10.00",
+    welcome: "පෙ.ව. 9.00",
   },
   venue: {
-    name: "Golden Rose Reception Hall",
-    city: "Colombo",
-    mapQuery: "Golden Rose Reception Hall, Colombo",
-    googleMapsLink: "https://maps.app.goo.gl/oFXbL74vBvHcvBX69",
+    name: "Pabavee Regency",
+    city: "උත්සව ශාලාවේ දී",
+    mapQuery: "Pabavee Regency",
+    googleMapsLink: "https://maps.google.com/?q=Pabavee+Regency",
   },
   rsvpContacts: [
-    "Nethmi - +94 77 123 4567",
-    "Diluka - +94 71 987 6543",
+    "ඕෂදී - 071 703 6699",
+    "නදීශ - 071 292 0937",
   ],
 } as const;
 
 const backgroundMusic = "/handawaka-various-artists.mp3";
 const googleScriptUrl =
-  "https://script.google.com/macros/s/AKfycbx6tVTRxM0Fjc10fR0a35PjSjb9JJN-9F7zDpxyJvVMhdZ3A-_rOkAV8x8Cwpeqfp5NLw/exec";
+  "https://script.google.com/macros/s/AKfycbzXKeiKYrGd2muQ7dONz16dRKrkSO6LdqlswpmrqriY_DrKgYGHPrcpRpyJuv49TOEX/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 const preImagePath = (fileName: string) => `/pre/${fileName.replaceAll(" ", "%20")}`;
@@ -624,17 +624,17 @@ export default function WeddingInvitation() {
 
                   <div className="text-[#2d5a27] space-y-6 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
                     <p className="text-slate-700">
-                      පෙරේරා මහතාගේ සහ එම මහත්මියගේ ආදරණීය දියණිය වන
+                      ආර්. ඒ. උදය උපුල් මහතාගේ සහ චන්දිමා පල්ලෙවත්ත මැතිණියගේ ආදරණීය දියණිය වන
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
-                      නෙත්මි ශෙහානි පෙරේරා
+                      ඕෂදී නිමේෂා
                     </h3>
 
                     <p className="text-slate-700">
-                      ජයසිංහ මහතාගේ සහ එම මහත්මියගේ ආදරණීය පුත් වන
+                      එන්. ජී. උපුල් චන්ද්‍රසිරි මහතාගේ සහ සුචිතා විදානගේ මැතිණියගේ ආදරණීය පුත් වන
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
-                      දිලූක මධුශාන් ජයසිංහ
+                      නදීශ චතුරංග
                     </h3>
 
                     <p className="text-slate-700 max-w-2xl mx-auto pt-2">
@@ -942,6 +942,17 @@ export default function WeddingInvitation() {
 
                   <p className="text-sm md:text-base tracking-[0.5em] text-[#2d5a27]/50 font-bold pt-12">
                     © 2026 {INVITATION.couple.bride} සහ {INVITATION.couple.groom}
+                  </p>
+                  <p className="text-[10px] md:text-xs tracking-[0.2em] text-[#2d5a27]/50 font-bold pt-4 font-sans uppercase">
+                    Designed by{" "}
+                    <a
+                      href="https://wa.me/94707819074"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#2d5a27]/70 hover:text-[#2d5a27] transition-colors underline decoration-[#2d5a27]/30 underline-offset-4 font-black"
+                    >
+                      InviteMint
+                    </a>
                   </p>
                 </motion.div>
               </div>

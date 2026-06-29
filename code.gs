@@ -6,12 +6,10 @@
  *
  * Required sheets:
  * - rsvp
- * - wish
  */
 
-const SPREADSHEET_ID = "1s7CtSYuu0PeysjHKpaA7d8LQVb_d7xe87XkUu_KQ9lY";
+const SPREADSHEET_ID = "1lwhafADiCLlLteY8rEPtpzrScVl72xDg5Jzx7BDGOLU";
 const RSVP_SHEET_NAME = "rsvp";
-const WISH_SHEET_NAME = "wish";
 
 function doPost(e) {
   return handleRequest_(e);
@@ -32,10 +30,6 @@ function handleRequest_(e) {
 
     if (action === "rsvp") {
       return jsonResponse_(saveRsvp_(params));
-    }
-
-    if (action === "wish") {
-      return jsonResponse_(saveWish_(params));
     }
 
     return jsonResponse_({ ok: false, message: "Invalid action" });
@@ -79,22 +73,7 @@ function saveRsvp_(params) {
   return { ok: true, message: "RSVP saved" };
 }
 
-function saveWish_(params) {
-  const sheet = getSheet_(WISH_SHEET_NAME);
 
-  ensureHeader_(sheet, ["timestamp", "name", "message"]);
-
-  const name = String(params.name || "").trim();
-  const message = String(params.message || "").trim();
-
-  if (!name || !message) {
-    return { ok: false, message: "Name and message are required" };
-  }
-
-  sheet.appendRow([new Date(), name, message]);
-
-  return { ok: true, message: "Wish saved" };
-}
 
 function getSheet_(sheetName) {
   const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
