@@ -624,14 +624,14 @@ export default function WeddingInvitation() {
 
                   <div className="text-[#2d5a27] space-y-6 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
                     <p className="text-slate-700">
-                      ආර්. ඒ. උදය උපුල් මහතාගේ සහ චන්දිමා පල්ලෙවත්ත මැතිණියගේ ආදරණීය දියණිය වන
+                      ආර්. ඒ.යූ .උපුල් රූපසිංහ මහතාගේ සහ චන්දිමා මල්ලවාරච්චි මැතිණියගේ ආදරණීය දියණිය වන
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       ඕෂදී නිමේෂා
                     </h3>
 
                     <p className="text-slate-700">
-                      එන්. ජී. උපුල් චන්ද්‍රසිරි මහතාගේ සහ සුචිතා විදානගේ මැතිණියගේ ආදරණීය පුත් වන
+                      එන්. ජී. උපුල් චන්ද්‍රසිරි මහතාගේ සහ සුමිත්රා විදානගමගේ මැතිණියගේ ආදරණීය පුත් වන
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       නදීශ චතුරංග
@@ -692,6 +692,9 @@ export default function WeddingInvitation() {
                             වේලාව
                           </div>
                           <div className="text-base md:text-lg text-[#2d5a27] tracking-wide font-bold">
+                            පෙ.ව. 9.00 සිට ප.ව 4.00 දක්වා
+                          </div>
+                          <div className="text-sm md:text-base text-[#2d5a27]/80 tracking-wide mt-1">
                             පෝරුව චාරිත්‍ර {INVITATION.time.ceremonyStart}ට
                           </div>
                         </div>
